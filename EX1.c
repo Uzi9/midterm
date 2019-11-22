@@ -5,18 +5,18 @@ int main(){
     int i = 0;
     int j = 1;
     int k = 0;
-    while((c[i]= getchar()) != '\n'){
+    c[i]=getchar();
+    while(c[i]!='\n'){
         i++;
+        c[i]=getchar();
     }
     for(k = 0;k<i;){
         if((c[k]>='A'&&c[k]<='Z')||(c[k]>='a'&&c[k]<='z')){
             k++;
         }
-        
         else{
             j++;
             k++;
-        
         }
     }
     printf("The number of word is: %d\n",j);
